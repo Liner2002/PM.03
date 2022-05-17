@@ -21,6 +21,8 @@ namespace src
             mFarm.Zapolnim();
 
             mFarm.Sortirujem();
+
+            mFarm.SaveasFile();
         }
     }
 }

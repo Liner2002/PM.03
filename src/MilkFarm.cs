@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,6 +51,21 @@ namespace src
         {
 
             Array.Sort(this.chProducts);
+
+        }
+        internal void SaveasFile()
+        {
+
+            using (StreamWriter file = new StreamWriter("finalresult.txt", false, Encoding.UTF8))
+            {
+
+                foreach (Cheese c in this.chProducts)
+                {
+
+                    file.WriteLine(c.MakeString());
+
+                }
+            }
 
         }
     }

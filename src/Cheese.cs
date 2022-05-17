@@ -44,5 +44,9 @@ namespace src
             }
 
         }
+        internal string MakeString()
+        {
+            return string.Format("Марка: {0}  Производитель: {1} Процент жирности: {2}", brand, manufacturer, fatrep);
+        }
     }
 }

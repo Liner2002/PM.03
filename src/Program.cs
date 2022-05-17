@@ -15,6 +15,10 @@ namespace src
             Console.WriteLine("Введите количество продуктов:");
 
             int productsMANY = Convert.ToInt32(Console.ReadLine());
+
+            MilkFarm mFarm = new MilkFarm(productsMANY);
+
+            mFarm.Zapolnim();
         }
     }
 }

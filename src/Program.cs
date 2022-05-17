@@ -19,6 +19,8 @@ namespace src
             MilkFarm mFarm = new MilkFarm(productsMANY);
 
             mFarm.Zapolnim();
+
+            mFarm.Sortirujem();
         }
     }
 }

@@ -11,10 +11,13 @@ namespace src
         int mProducts;
 
 
+        internal Cheese[] chProducts;
+
         internal MilkFarm(int _mProducts)
         {
             this.mProducts = _mProducts;
 
+            chProducts = new Cheese[_mProducts];
 
         }
 
@@ -40,8 +43,14 @@ namespace src
 
                 fatPer = Convert.ToInt32(Console.ReadLine());
 
-
+                this.chProducts[i] = new Cheese(brand, manufacturer, fatPer);
             }
+        }
+        internal void Sortirujem()
+        {
+
+            Array.Sort(this.chProducts);
+
         }
     }
 }

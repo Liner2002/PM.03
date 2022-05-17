@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace src
 {
-    internal class Cheese
+    internal class Cheese: IComparable
     {
         internal string brand;
 
@@ -21,6 +21,27 @@ namespace src
             this.manufacturer = manufacturer;
 
             this.fatrep = fatrep;
+
+        }
+        public int CompareTo(object o)
+        {
+            Cheese c = o as Cheese;
+
+            if (c != null)
+            {
+
+                int result = manufacturer.CompareTo(c.manufacturer);
+
+
+                if (result != 0) return result;
+
+                return fatrep.CompareTo(c.fatrep);
+
+            }
+            else
+            {
+                throw new Exception("Ошибка сравнения!!!");
+            }
 
         }
     }

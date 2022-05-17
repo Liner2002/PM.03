@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace src
 {
-    class MilkFarm
+    internal class MilkFarm
     {
         int mProducts;
 
